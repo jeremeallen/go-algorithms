@@ -39,10 +39,29 @@ func check_sorted(arr []int) {
 }
 
 func bubble_sort(arr []int) {
-	fmt.Println("Bubble Sort")
+	n := len(arr)
+
+    for i := 0; i < n-1; i++ {
+        // Flag to check if any swaps were made in the inner loop
+        swapped := false
+
+        for j := 0; j < n-i-1; j++ {
+            // Swap elements if the current element is greater than the next element
+            if arr[j] > arr[j+1] {
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = true
+            }
+        }
+
+        // If no swaps were made in the inner loop, the array is already sorted
+        if !swapped {
+            break
+        }
+    }
 }
 
 func main() {
+    sss
     rand.Seed(time.Now().UnixNano())
 
     // Get the number of items and maximum item value.
