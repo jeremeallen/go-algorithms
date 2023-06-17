@@ -61,7 +61,6 @@ func bubble_sort(arr []int) {
 }
 
 func main() {
-    sss
     rand.Seed(time.Now().UnixNano())
 
     // Get the number of items and maximum item value.
